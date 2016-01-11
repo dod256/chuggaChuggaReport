@@ -7,6 +7,24 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <f:view>
     <h:form>
+        <h:panelGrid columns="3">
+            <h:inputText id="date" value="#{ticketController.firstDate}"
+                     size="20" required="true"
+                     label="First Date" >
+
+            <f:convertDateTime pattern="d-M-yyyy" />
+        </h:inputText>
+        <h:message for="date" style="color:red" />
+        </h:panelGrid>
+        <h:panelGrid columns="3">
+        <h:inputText id="date2" value="#{ticketController.secondDate}"
+                     size="20" required="true"
+                     label="Second Date" >
+
+            <f:convertDateTime pattern="d-M-yyyy" />
+        </h:inputText>
+        <h:message for="date2" style="color:red" />
+        </h:panelGrid>
         <h:commandButton action="#{ticketController.loadReport}" value="Set data period"/>
     </h:form>
     <h:outputLink value="/chuggaChuggaReport/getPdf">

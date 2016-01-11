@@ -11,13 +11,32 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @ManagedBean
 @SessionScoped
 public class TicketController {
 
+    private Date firstDate;
+    private Date secondDate;
     private List<Ticket> result = new ArrayList<>();
+
+    public Date getFirstDate() {
+        return firstDate;
+    }
+
+    public void setFirstDate(Date firstDate) {
+        this.firstDate = firstDate;
+    }
+
+    public Date getSecondDate() {
+        return secondDate;
+    }
+
+    public void setSecondDate(Date secondDate) {
+        this.secondDate = secondDate;
+    }
 
     public String loadReport() {
         String url = "http://localhost:8080/ChuggaChugga/api/report/";
