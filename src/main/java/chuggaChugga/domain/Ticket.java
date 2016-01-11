@@ -7,7 +7,6 @@ public class Ticket {
     private String trainName;
     private String departureStation;
     private String arrivalStation;
-    private int cost;
     private String departureDate;
     private String arrivalDate;
 
@@ -17,7 +16,6 @@ public class Ticket {
         trainName = builder.trainName;
         departureStation = builder.departureStation;
         arrivalStation = builder.arrivalStation;
-        cost = builder.cost;
         departureDate = builder.departureDate;
         arrivalDate = builder.arrivalDate;
     }
@@ -32,7 +30,6 @@ public class Ticket {
         private String trainName;
         private String departureStation;
         private String arrivalStation;
-        private int cost;
         private String departureDate;
         private String arrivalDate;
 
@@ -61,11 +58,6 @@ public class Ticket {
 
         public Builder withArrivalStation(String val) {
             arrivalStation = val;
-            return this;
-        }
-
-        public Builder withCost(int val) {
-            cost = val;
             return this;
         }
 
@@ -102,10 +94,6 @@ public class Ticket {
 
     public String getArrivalStation() {
         return arrivalStation;
-    }
-
-    public int getCost() {
-        return cost;
     }
 
     public String getDepartureDate() {

@@ -50,7 +50,6 @@ public class TicketController {
             ticketBuilder.withUserFirstName(jsonObject.getString("userFirstName"))
                          .withUserLastName(jsonObject.getString("userLastName"))
                          .withTrainName(jsonObject.getString("trainName"))
-                         .withCost(jsonObject.getInt("cost"))
                          .withArrivalDate(jsonObject.getString("arrivalDate"))
                          .withDepartureDate(jsonObject.getString("departureDate"))
                          .withArrivalStation(jsonObject.getString("arrivalStation"))
@@ -60,5 +59,9 @@ public class TicketController {
             result.add(ticketBuilder.build());
         }
         return "success";
+    }
+
+    public List<Ticket> getTicketList() {
+        return result;
     }
 }
