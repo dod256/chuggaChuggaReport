@@ -7,8 +7,11 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <f:view>
     <h:form>
-        <h:commandButton action="#{ticketController.loadReport}" value="Get report"/>
+        <h:commandButton action="#{ticketController.loadReport}" value="Set data period"/>
     </h:form>
+    <h:outputLink value="/chuggaChuggaReport/getPdf">
+        <h:outputText value="Get Pdf"/>
+    </h:outputLink>
 
 </f:view>
 </html>

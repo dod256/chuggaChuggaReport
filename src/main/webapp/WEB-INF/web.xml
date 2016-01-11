@@ -19,9 +19,19 @@
         <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
+    <servlet>
+        <servlet-name>GetPdfServlet</servlet-name>
+        <servlet-class>chuggaChugga.servlet.GetPdfServlet</servlet-class>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>*.xhtml</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>GetPdfServlet</servlet-name>
+        <url-pattern>/getPdf</url-pattern>
     </servlet-mapping>
 
     <welcome-file-list>
