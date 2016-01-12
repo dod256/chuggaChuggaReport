@@ -39,7 +39,7 @@ public class TicketController {
     }
 
     public String loadReport() {
-        String url = "http://localhost:8080/ChuggaChugga/api/report/";
+        String url = "http://localhost:8080/ChuggaChugga/api/report/" + firstDate.getTime() + "/" + secondDate.getTime();
 
         Client client = ClientBuilder.newClient();
         WebTarget webTarget = client.register(JsonProcessingFeature.class).target(url);
